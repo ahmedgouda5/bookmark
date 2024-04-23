@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <title>Bookmark</title>
+  </head>
+  <body>
+    <main >
+     <div class="container p-5">
+      <div class="box position-relative d-flex flex-column">
+        <h1 class="text-center  weat">bookmark</h1>
+        <div class="inner mt-5">
+          <h3 class="text-center book">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h3>
+        </div>
+        <div class="inputname mb-3">
+          <label for="inputSiteName" class="form-label"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+          <input type="text" id="inputSiteName" class="form-control" oninput="validation(siteName,inputSiteName)"/>
+        </div>
+        <div class="inputurl">
+          <label for="inputurl" class="form-label"> <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+          <input type="url" id="inputurl" class="form-control" oninput="validation(siteUrl,inputurl)" />
+        </div>
+       
+        <button type="button" class="btn btn-danger m-auto mt-4 px-3 " id="submitButton" onclick="Addwebsite()"> Submit</button>
+      </div>
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+         
+        </tbody>
+      </table>
+     </div>
+    </main>
+
+    
+
+    <script src="index.js"></script>
+  </body>
+</html>
